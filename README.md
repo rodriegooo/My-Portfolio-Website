@@ -5,7 +5,8 @@
 This is a single-page responsive portfolio website created as part of a lab assignment (HCI Lab: Build and Test a Single-Page Responsive Portfolio). The website showcases my personal information, education and experience, skills, projects, and contact details. It is built using HTML and CSS.
 
 * URL Link to website portfolio: [Click Here](https://rodriegooo.github.io/My-Portfolio-Website/)
-* URL Link to website design: [Click Here](https://github.com/rodriegooo/My-Portfolio-Website)
+* URL Link to website design for desktop & tablet: [Click Here](https://canva.link/yhee58o051e3dhu)
+* URL Link to website design for mobile: [Click Here](https://canva.link/t8typ3pler8mezf)
 
 ## 🎯 Purpose
 
@@ -108,10 +109,12 @@ My Portfolio Website on Mobile:
 Website design:
 
 My Portfolio Website on Desktop & Tablet:
-<img width="1440" height="4000" alt="Desktop - HCI LAB Build and Test a Single-Page Responsive Portfolio (4)" src="https://github.com/user-attachments/assets/57c716df-470f-4362-9776-5340136a2479" />
+<img width="1440" height="4000" alt="Desktop - HCI LAB Build and Test a Single-Page Responsive Portfolio (4)" src="https://github.com/user-attachments/assets/483a5163-3b6e-4d6b-baf0-2b039371b4fd" />
+
 
 My Portfolio Website on Mobile:
-<img width="360" height="1550" alt="Mobile - HCI LAB Build and Test a Single-Page Responsive Portfolio (1)" src="https://github.com/user-attachments/assets/41cee0ed-1fd6-4ea5-8e6d-82ea411fad62" />
+<img width="360" height="1550" alt="Mobile - HCI LAB Build and Test a Single-Page Responsive Portfolio (1)" src="https://github.com/user-attachments/assets/c0c8eedd-b758-4dd0-90a0-4d8d310c03e1" />
+
 
 
 -->
