@@ -111,7 +111,6 @@ Website design:
 My Portfolio Website on Desktop & Tablet:
 <img width="1440" height="4000" alt="Desktop - HCI LAB Build and Test a Single-Page Responsive Portfolio (4)" src="https://github.com/user-attachments/assets/483a5163-3b6e-4d6b-baf0-2b039371b4fd" />
 
-
 My Portfolio Website on Mobile:
 <img width="360" height="1550" alt="Mobile - HCI LAB Build and Test a Single-Page Responsive Portfolio (1)" src="https://github.com/user-attachments/assets/c0c8eedd-b758-4dd0-90a0-4d8d310c03e1" />
 
