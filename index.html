@@ -4,140 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alfonsus Rodrigo Haryoko | Portfolio</title>
+    <meta name="description" content="Portfolio of Alfonsus Rodrigo Haryoko, Computer Science student at BINUS International interested in data science, programming, and quantitative analysis.">
+
+    <script>
+        /* Set theme before paint to avoid a flash */
+        (function () {
+            var theme = 'dark';
+            try { if (localStorage.getItem('theme') === 'light') theme = 'light'; } catch (e) {}
+            document.documentElement.setAttribute('data-theme', theme);
+            document.documentElement.classList.add('js');
+        })();
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
+
+    <!-- SVG icon sprite -->
+    <svg class="sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-py" viewBox="0 0 24 24"><path d="M9.585 11.692h4.328s2.432.039 2.432-2.35V5.391S16.714 3 11.936 3C7.362 3 7.647 4.983 7.647 4.983l.006 2.055h4.363v.617H5.92s-2.927-.332-2.927 4.282 2.555 4.45 2.555 4.45h1.524v-2.141s-.083-2.554 2.513-2.554m-.056-5.74a.784.784 0 1 1 0-1.57.784.784 0 1 1 0 1.57"/><path d="M18.452 7.532h-1.524v2.141s.083 2.554-2.513 2.554h-4.328s-2.432-.04-2.432 2.35v3.951s-.369 2.391 4.409 2.391c4.573 0 4.288-1.983 4.288-1.983l-.006-2.054h-4.363v-.617h6.097s2.927.332 2.927-4.282-2.555-4.451-2.555-4.451m-3.981 10.436a.784.784 0 1 1 0 1.57.784.784 0 1 1 0-1.57"/></symbol>
+        <symbol id="i-html" viewBox="0 0 24 24"><path d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826zm5.266 7.302-.173-2.035 7.533.002.173-1.963-9.87-.002.522 5.998h6.835l-.243 2.566-2.179.602-2.214-.605-.141-1.58H7.691l.247 3.123L12 17.506l4.028-1.08.558-6.111H9.402z"/></symbol>
+        <symbol id="i-css" viewBox="0 0 24 24"><path d="M4.192 3.143h15.615l-1.42 16.034-6.404 1.812-6.369-1.813zM16.9 6.424l-9.8-.002.158 1.949 7.529.002-.189 2.02H9.66l.179 1.913h4.597l-.272 2.62-2.164.598-2.197-.603-.141-1.569h-1.94l.216 2.867L12 17.484l3.995-1.137z"/></symbol>
+        <symbol id="i-google" viewBox="0 0 24 24"><path d="M20.283 10.356h-8.327v3.451h4.792c-.446 2.193-2.313 3.453-4.792 3.453a5.27 5.27 0 0 1-5.279-5.28 5.27 5.27 0 0 1 5.279-5.279c1.259 0 2.397.447 3.29 1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233a8.91 8.91 0 0 0-8.934 8.934 8.907 8.907 0 0 0 8.934 8.934c4.467 0 8.529-3.249 8.529-8.934 0-.528-.081-1.097-.202-1.625"/></symbol>
+        <symbol id="i-code" viewBox="0 0 24 24"><path d="m16.71 16.71 4.7-4.71-4.7-4.71-1.42 1.42 3.3 3.29-3.3 3.29zm-8-1.42L5.41 12l3.3-3.29-1.42-1.42L2.59 12l4.7 4.71zM14 3l-.98-.22-2 9-2 9L10 21l.98.22 2-9 2-9z"/></symbol>
+        <symbol id="i-people" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5"/></symbol>
+        <symbol id="i-briefcase" viewBox="0 0 24 24"><path d="M20 6h-3V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9 4h6v2H9zM8 8h12v3.07l-.83.39a16.78 16.78 0 0 1-14.34 0L4 11.07V8zM4 20v-6.72c2.54 1.19 5.27 1.79 8 1.79s5.46-.6 8-1.79V20z"/></symbol>
+        <symbol id="i-cap" viewBox="0 0 24 24"><path d="m21.45 8.61-9-4.5a1 1 0 0 0-.89 0l-6 3-3 1.5-1 .5a1 1 0 0 0-.55.89v6h2v-5.38l2 1v3.83c0 2.06 3.12 4.56 7 4.56s7-2.49 7-4.56v-3.83l2.45-1.22c.34-.17.55-.52.55-.89s-.21-.72-.55-.89Zm-15 .29L12 6.12l6.76 3.38L12 12.88 5.24 9.5l1.21-.61ZM17 15.45c0 .76-2.11 2.56-5 2.56s-5-1.79-5-2.56v-2.83l4.55 2.28c.14.07.29.11.45.11s.31-.04.45-.11L17 12.62z"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M6 13h8.09l-3.3 3.29 1.42 1.42 5.7-5.71-5.7-5.71-1.42 1.42 3.3 3.29H6z"/></symbol>
+        <symbol id="i-download" viewBox="0 0 24 24"><path d="M11 4h2v8.17l2.59-2.58L17 11l-5 5-5-5 1.41-1.41L11 12.17zM5 18h14v2H5z"/></symbol>
+        <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 4 4 12l1.41 1.41L11 7.83V20h2V7.83l5.59 5.58L20 12z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 2v.51l-8 6.22-8-6.22V6zM4 18V9.04l7.39 5.74c.18.14.4.21.61.21s.43-.07.61-.21L20 9.03v8.96H4Z"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M4.983 2.821a2.188 2.188 0 1 0 0 4.376 2.188 2.188 0 1 0 0-4.376m4.254 6.034v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66zm-6.142 0H6.87v12.139H3.095z"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2"/></symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 17.01c2.76 0 5.01-2.25 5.01-5.01S14.76 6.99 12 6.99 6.99 9.24 6.99 12s2.25 5.01 5.01 5.01M12 9c1.66 0 3.01 1.35 3.01 3.01s-1.35 3.01-3.01 3.01-3.01-1.35-3.01-3.01S10.34 9 12 9m1 10h-2v3h2zm0-17h-2v3h2zM2 11h3v2H2zm17 0h3v2h-3zM4.22 18.36l.71.71.71.71 1.06-1.06 1.06-1.06-.71-.71-.71-.71-1.06 1.06zM19.78 5.64l-.71-.71-.71-.71-1.06 1.06-1.06 1.06.71.71.71.71 1.06-1.06zm-12.02.7L6.7 5.28 5.64 4.22l-.71.71-.71.71L5.28 6.7l1.06 1.06.71-.71zm8.48 11.32 1.06 1.06 1.06 1.06.71-.71.71-.71-1.06-1.06-1.06-1.06-.71.71z"/></symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></symbol>
+    </svg>
+
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <canvas class="bg-canvas" aria-hidden="true"></canvas>
+
     <!-- Navbar -->
     <header class="site-header">
-        <a href="#" class="brand">Alfonsus R. H.</a>
+        <a href="#home" class="brand" aria-label="Alfonsus R. H.">
+            <span class="brand-mark">A</span>
+            <span class="brand-name">Alfonsus R. H.</span>
+        </a>
 
-        <nav>
+        <nav id="main-nav" aria-label="Main">
             <ul class="nav-list">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><svg class="sun-icon" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 17.01c2.76 0 5.01-2.25 5.01-5.01S14.76 6.99 12 6.99 6.99 9.24 6.99 12s2.25 5.01 5.01 5.01M12 9c1.66 0 3.01 1.35 3.01 3.01s-1.35 3.01-3.01 3.01-3.01-1.35-3.01-3.01S10.34 9 12 9m1 10h-2v3h2zm0-17h-2v3h2zM2 11h3v2H2zm17 0h3v2h-3zM4.22 18.36l.71.71.71.71 1.06-1.06 1.06-1.06-.71-.71-.71-.71-1.06 1.06zM19.78 5.64l-.71-.71-.71-.71-1.06 1.06-1.06 1.06.71.71.71.71 1.06-1.06zm-12.02.7L6.7 5.28 5.64 4.22l-.71.71-.71.71L5.28 6.7l1.06 1.06.71-.71zm8.48 11.32 1.06 1.06 1.06 1.06.71-.71.71-.71-1.06-1.06-1.06-1.06-.71.71z"></path></svg></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav_exp">Experience</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Skills</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
             </ul>
         </nav>
+
+        <div class="header-tools">
+            <button type="button" class="lang-btn" id="langBtn" data-i18n-aria="lang">
+                <span data-l="en">EN</span><span class="sep">/</span><span data-l="id">ID</span>
+            </button>
+            <button type="button" class="theme-btn" id="themeBtn" data-i18n-aria="theme">
+                <svg class="icon-sun"><use href="#i-sun"/></svg>
+                <svg class="icon-moon"><use href="#i-moon"/></svg>
+            </button>
+            <button type="button" class="hamburger" id="menuBtn" aria-controls="main-nav" aria-expanded="false" data-i18n-aria="menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
 
     <main>
 
-    <!-- Hero Section (Home) -->
+        <!-- Hero -->
         <section id="home" class="hero">
             <div class="hero-text">
-                <p class="small-title">COMPUTER SCIENCE STUDENT · BINUS INTERNATIONAL</p>
-                <h1>Turning curiosity into <span class="highlight">data-driven thinking.</span></h1>
-                <p>
+                <p class="eyebrow hero-in" style="--d:0ms" data-i18n="hero_eyebrow">COMPUTER SCIENCE STUDENT · BINUS INTERNATIONAL</p>
+                <h1 class="hero-in" style="--d:120ms">Turning curiosity into <span class="highlight">data-driven thinking.</span></h1>
+                <p class="hero-lead hero-in" style="--d:240ms" data-i18n="hero_p">
                     I'm Alfonsus Rodrigo Haryoko, a Computer Science undergraduate at BINUS International interested in programming, data analysis, and quantitative analysis. I'm building my technical foundations through continuous learning and practical work.
                 </p>
 
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-filled">Explore My Projects <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M6 13h8.09l-3.3 3.29 1.42 1.42 5.7-5.71-5.7-5.71-1.42 1.42 3.3 3.29H6z"></path></svg></a>
-                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                <div class="hero-buttons hero-in" style="--d:360ms">
+                    <a href="#projects" class="btn btn-filled magnetic"><span data-i18n="hero_cta1">Explore My Projects</span> <svg><use href="#i-arrow"/></svg></a>
+                    <a href="#contact" class="btn btn-outline magnetic"><span data-i18n="hero_cta2">Get in Touch</span></a>
+                    <a href="files/CV - Alfonsus Rodrigo Haryoko.pdf" download class="btn btn-ghost magnetic"><span data-i18n="hero_cv">Download CV</span> <svg><use href="#i-download"/></svg></a>
+                </div>
+
+                <div class="hero-stats hero-in" style="--d:480ms">
+                    <div class="stat"><strong class="count" data-count="3">0</strong><span data-i18n="stat_projects">Projects</span></div>
+                    <div class="stat"><strong class="count" data-count="4">0</strong><span data-i18n="stat_tech">Technical skills</span></div>
+                    <div class="stat"><strong class="count" data-count="2026">0</strong><span data-i18n="stat_since">Started B.Sc.</span></div>
                 </div>
             </div>
 
-            <div class="hero-image">
-                <img src="images/Data Science - Hero Image.jpg" alt="Hero image">
+            <div class="hero-visual hero-in" style="--d:300ms">
+                <div class="orbit" aria-hidden="true"></div>
+                <div class="orbit orbit-2" aria-hidden="true"></div>
+                <div class="hero-image tilt">
+                    <img src="images/Data Science - Hero Image.jpg" alt="Hero image">
+                </div>
+                <div class="float-badge b1"><svg><use href="#i-py"/></svg> Python</div>
+                <div class="float-badge b2"><svg><use href="#i-code"/></svg> Data &amp; Quant</div>
             </div>
         </section>
 
-        
-    <!-- About Section -->
+        <!-- Marquee -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-group"><span>Data Science</span><span>Programming</span><span>Quantitative Analysis</span><span>Data Analysis</span><span>Python</span><span>Mathematics</span></div>
+                <div class="marquee-group"><span>Data Science</span><span>Programming</span><span>Quantitative Analysis</span><span>Data Analysis</span><span>Python</span><span>Mathematics</span></div>
+            </div>
+        </div>
+
+        <!-- About -->
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title left">About Me</h2>
+                <div class="section-head reveal">
+                    <span class="eyebrow" data-i18n="nav_about">About</span>
+                    <h2 class="section-title" data-i18n="about_title">About Me</h2>
+                </div>
 
-                <div class="box about-box">
-                    <p>
-                        I am a Computer Science undergraduate at BINUS International with a strong interest in Data Science, programming, and data analysis. I am particularly interested in how data, mathematics, and technology can be used to identify patterns, solve problems, and support informed decision-making. With a background in mathematical problem-solving and a growing interest in quantitative finance, I am motivated to understand how analytical methods can be applied to real-world challenges.
-                    </p>
-                    <p>
-                        Beyond my academic interests, I have gained practical experience through administrative work, organizational activities, and event coordination. During my experience as an Administrative Assistant, I helped organize financial and administrative documents and process facility usage records using Excel. These responsibilities strengthened my appreciation for data organization, accuracy, and structured information management. My involvement in student council activities and event planning has also helped me develop communication, teamwork, coordination, and adaptability.
-                    </p>
-                    <p>
-                        I am currently focused on strengthening my programming skills, expanding my technical knowledge, and building a stronger foundation in data analysis. I approach learning with curiosity and a willingness to take on new challenges, viewing each experience as an opportunity to improve my problem-solving abilities and broaden my understanding of technology. Looking ahead, I aim to develop practical experience through academic and personal projects while exploring opportunities in Data Science and Quantitative Finance, where I can combine analytical thinking, mathematical reasoning, and programming to contribute to meaningful, data-driven solutions.
-                    </p>
+                <div class="about-grid">
+                    <aside class="card spot about-side reveal">
+                        <p class="about-quote" data-i18n="about_quote">Data, mathematics &amp; technology.</p>
+                        <p class="small-text muted" data-i18n="about_focus">Focus areas</p>
+                        <ul class="tags">
+                            <li class="tag">Data Science</li>
+                            <li class="tag">Programming</li>
+                            <li class="tag">Data Analysis</li>
+                            <li class="tag">Quantitative Finance</li>
+                        </ul>
+                    </aside>
+
+                    <div class="card spot about-box reveal" id="aboutTabs">
+                        <div class="about-tabs" role="tablist">
+                            <button type="button" class="about-tab active" role="tab" aria-selected="true" aria-controls="ap-0" id="at-0" data-i18n="tab_profile">Profile</button>
+                            <button type="button" class="about-tab" role="tab" aria-selected="false" aria-controls="ap-1" id="at-1" tabindex="-1" data-i18n="tab_exp">Experience</button>
+                            <button type="button" class="about-tab" role="tab" aria-selected="false" aria-controls="ap-2" id="at-2" tabindex="-1" data-i18n="tab_next">What's next</button>
+                            <span class="about-ink" aria-hidden="true"></span>
+                        </div>
+                        <div class="about-panels">
+                            <p class="about-panel active" role="tabpanel" id="ap-0" aria-labelledby="at-0" data-i18n="about_p1">I'm a Computer Science undergraduate at BINUS International with a strong interest in Data Science, programming, and quantitative finance. I'm drawn to how data, mathematics, and technology reveal patterns and support better decisions.</p>
+                            <p class="about-panel" role="tabpanel" id="ap-1" aria-labelledby="at-1" data-i18n="about_p2" hidden>Administrative work and event coordination taught me accuracy, structured information management, communication, and teamwork.</p>
+                            <p class="about-panel" role="tabpanel" id="ap-2" aria-labelledby="at-2" data-i18n="about_p3" hidden>I'm sharpening my programming skills and building projects, aiming to combine analytical thinking and code into meaningful, data-driven solutions.</p>
+                        </div>
+                        <div class="about-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- Experience & Education Section -->
+        <!-- Experience & Education -->
         <section id="experience" class="section">
             <div class="container">
-                <h2 class="section-title">Experience &amp; Education</h2>
+                <div class="section-head reveal">
+                    <span class="eyebrow" data-i18n="nav_exp">Experience</span>
+                    <h2 class="section-title" data-i18n="exp_title">Experience &amp; Education</h2>
+                </div>
 
                 <div class="timeline-wrap">
 
                     <div class="timeline-col">
-                        <h3 class="col-title"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 6h-3V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9 4h6v2H9zM8 8h12v3.07l-.83.39a16.78 16.78 0 0 1-14.34 0L4 11.07V8zM4 20v-6.72c2.54 1.19 5.27 1.79 8 1.79s5.46-.6 8-1.79V20z"></path></svg> Experience</h3>
+                        <h3 class="col-title reveal"><svg><use href="#i-briefcase"/></svg> <span data-i18n="col_exp">Experience</span></h3>
 
                         <div class="timeline">
-                            <article class="timeline-item">
+                            <article class="timeline-item reveal">
                                 <span class="dot"></span>
-                                <span class="date">Sep 2025 (1 mo)</span>
-                                <div class="box">
+                                <span class="date" data-i18n="exp_date1">Sep 2025 (1 mo)</span>
+                                <div class="card spot">
                                     <div class="item-head">
                                         <img src="images/MBSB Logo.jpg" alt="MBSB Logo" class="logo">
                                         <div>
-                                            <h4>Administrative Assistant</h4>
-                                            <p class="gray-text">Mary the Lady of All Nations Catholic Church</p>
+                                            <h4 data-i18n="exp_role1">Administrative Assistant</h4>
+                                            <p class="muted small-text">Mary the Lady of All Nations Catholic Church</p>
                                         </div>
                                     </div>
-                                    <p>
+                                    <p class="item-desc" data-i18n="exp_desc1">
                                         Supported administrative operations, organized financial and official documents, and helped process facility usage records in Excel.
                                     </p>
                                 </div>
                             </article>
                         </div>
                     </div>
-                    
-                    <div class="timeline-col">
-                        <h3 class="col-title"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="m21.45 8.61-9-4.5a1 1 0 0 0-.89 0l-6 3-3 1.5-1 .5a1 1 0 0 0-.55.89v6h2v-5.38l2 1v3.83c0 2.06 3.12 4.56 7 4.56s7-2.49 7-4.56v-3.83l2.45-1.22c.34-.17.55-.52.55-.89s-.21-.72-.55-.89Zm-15 .29L12 6.12l6.76 3.38L12 12.88 5.24 9.5l1.21-.61ZM17 15.45c0 .76-2.11 2.56-5 2.56s-5-1.79-5-2.56v-2.83l4.55 2.28c.14.07.29.11.45.11s.31-.04.45-.11L17 12.62z"></path></svg> Education</h3>
 
-                        <div class="timeline timeline-zigzag">
-                            <article class="timeline-item">
+                    <div class="timeline-col">
+                        <h3 class="col-title reveal"><svg><use href="#i-cap"/></svg> <span data-i18n="col_edu">Education</span></h3>
+
+                        <div class="timeline">
+                            <article class="timeline-item reveal">
                                 <span class="dot"></span>
-                                <span class="date">Aug 2026 - Present</span>
-                                <div class="box">
+                                <span class="date" data-i18n="edu_date1">Aug 2026 - Present</span>
+                                <div class="card spot">
                                     <div class="item-head">
                                         <img src="images/Binter Logo.png" alt="Binter Logo" class="logo">
                                         <div>
                                             <h4>Binus International</h4>
-                                            <p class="gray-text">Bachelor's Degree of Computer Science</p>
+                                            <p class="muted small-text" data-i18n="edu_deg1">Bachelor's Degree of Computer Science</p>
                                         </div>
                                     </div>
-                                    <p>
+                                    <p class="item-desc" data-i18n="edu_desc1">
                                         Pursuing an undergraduate degree with interests in programming, data science, and data analysis.
                                     </p>
                                 </div>
                             </article>
 
-                            <article class="timeline-item">
+                            <article class="timeline-item reveal">
                                 <span class="dot"></span>
-                                <span class="date">Jul 2023 - May 2026</span>
-                                <div class="box">
+                                <span class="date" data-i18n="edu_date2">Jul 2023 - May 2026</span>
+                                <div class="card spot">
                                     <div class="item-head">
                                         <img src="images/Ketapang Logo.png" alt="SKK Logo" class="logo">
                                         <div>
                                             <h4>SMA Kristen Ketapang III</h4>
-                                            <p class="gray-text">Science Major - Merdeka Curriculum</p>
+                                            <p class="muted small-text" data-i18n="edu_deg2">Science Major - Merdeka Curriculum</p>
                                         </div>
                                     </div>
-                                    <p>
-                                        Completed senior high school education with relevant coursework in Mathematics,Physics, Informatics, and English.
+                                    <p class="item-desc" data-i18n="edu_desc2">
+                                        Completed senior high school education with relevant coursework in Mathematics, Physics, Informatics, and English.
                                     </p>
                                 </div>
                             </article>
@@ -148,87 +239,97 @@
             </div>
         </section>
 
-
-        <!-- Skills Section -->
+        <!-- Skills -->
         <section id="skills" class="section">
             <div class="container">
-                <h2 class="section-title">Skills</h2>
+                <div class="section-head reveal">
+                    <span class="eyebrow" data-i18n="nav_skills">Skills</span>
+                    <h2 class="section-title" data-i18n="skills_title">Skills</h2>
+                </div>
 
-                <div class="box skills-box">
-                    <div class="skills-col">
-                        <h3><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="m16.71 16.71 4.7-4.71-4.7-4.71-1.42 1.42 3.3 3.29-3.3 3.29zm-8-1.42L5.41 12l3.3-3.29-1.42-1.42L2.59 12l4.7 4.71zM14 3l-.98-.22-2 9-2 9L10 21l.98.22 2-9 2-9z"></path></svg> Technical Skills</h3>
-                        <ul class="tags">
-                            <li class="tag"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9.585 11.692h4.328s2.432.039 2.432-2.35V5.391S16.714 3 11.936 3C7.362 3 7.647 4.983 7.647 4.983l.006 2.055h4.363v.617H5.92s-2.927-.332-2.927 4.282 2.555 4.45 2.555 4.45h1.524v-2.141s-.083-2.554 2.513-2.554m-.056-5.74a.784.784 0 1 1 0-1.57.784.784 0 1 1 0 1.57"></path><path d="M18.452 7.532h-1.524v2.141s.083 2.554-2.513 2.554h-4.328s-2.432-.04-2.432 2.35v3.951s-.369 2.391 4.409 2.391c4.573 0 4.288-1.983 4.288-1.983l-.006-2.054h-4.363v-.617h6.097s2.927.332 2.927-4.282-2.555-4.451-2.555-4.451m-3.981 10.436a.784.784 0 1 1 0 1.57.784.784 0 1 1 0-1.57"></path></svg> Python</li>
-                            <li class="tag"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826zm5.266 7.302-.173-2.035 7.533.002.173-1.963-9.87-.002.522 5.998h6.835l-.243 2.566-2.179.602-2.214-.605-.141-1.58H7.691l.247 3.123L12 17.506l4.028-1.08.558-6.111H9.402z"></path></svg> HTML</li>
-                            <li class="tag"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4.192 3.143h15.615l-1.42 16.034-6.404 1.812-6.369-1.813zM16.9 6.424l-9.8-.002.158 1.949 7.529.002-.189 2.02H9.66l.179 1.913h4.597l-.272 2.62-2.164.598-2.197-.603-.141-1.569h-1.94l.216 2.867L12 17.484l3.995-1.137z"></path></svg> CSS</li>
-                            <li class="tag"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20.283 10.356h-8.327v3.451h4.792c-.446 2.193-2.313 3.453-4.792 3.453a5.27 5.27 0 0 1-5.279-5.28 5.27 5.27 0 0 1 5.279-5.279c1.259 0 2.397.447 3.29 1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233a8.91 8.91 0 0 0-8.934 8.934 8.907 8.907 0 0 0 8.934 8.934c4.467 0 8.529-3.249 8.529-8.934 0-.528-.081-1.097-.202-1.625"></path></svg> Google Workspace</li>
+                <div class="skills-grid">
+                    <div class="card spot skills-col reveal">
+                        <h3><svg><use href="#i-code"/></svg> <span data-i18n="skills_tech">Technical Skills</span></h3>
+                        <ul class="tags tags-lg">
+                            <li class="tag"><svg><use href="#i-py"/></svg> Python</li>
+                            <li class="tag"><svg><use href="#i-html"/></svg> HTML</li>
+                            <li class="tag"><svg><use href="#i-css"/></svg> CSS</li>
+                            <li class="tag"><svg><use href="#i-google"/></svg> Google Workspace</li>
                         </ul>
                     </div>
 
-                    <div class="skills-col skills-col-right">
-                        <h3><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M19 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M5 20V4h14v16z"></path><path d="M7 12h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zM7 6h10v4H7zm4 10h2v2h-2zm4-4h2v6h-2z"></path></svg> Non-Technical Skills</h3>
-                        <ul class="tags">
-                            <li class="tag">Analytical Thinking</li>
-                            <li class="tag">Teamwork</li>
-                            <li class="tag">Adaptability</li>
-                            <li class="tag">Communication</li>
+                    <div class="card spot skills-col reveal">
+                        <h3><svg><use href="#i-people"/></svg> <span data-i18n="skills_non">Non-Technical Skills</span></h3>
+                        <ul class="tags tags-lg tags-outline">
+                            <li class="tag" data-i18n="sk_analytical">Analytical Thinking</li>
+                            <li class="tag" data-i18n="sk_team">Teamwork</li>
+                            <li class="tag" data-i18n="sk_adapt">Adaptability</li>
+                            <li class="tag" data-i18n="sk_comm">Communication</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- Featured Project Section -->
+        <!-- Projects -->
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title left">Featured Project</h2>
+                <div class="section-head reveal">
+                    <span class="eyebrow" data-i18n="nav_projects">Projects</span>
+                    <h2 class="section-title" data-i18n="proj_title">Featured Project</h2>
+                </div>
 
                 <div class="projects">
 
-                    <!-- Project 1 -->
-                    <article class="project-card">
-                        <img src="images/Indonesia Geography Project.jpeg" alt="Geographical Information of Indonesia" class="project-img">
+                    <article class="project-card tilt spot">
+                        <div class="project-media">
+                            <img src="images/Indonesia Geography Project.jpeg" alt="Geographical Information of Indonesia" class="project-img">
+                            <span class="project-num">01</span>
+                        </div>
                         <div class="project-body">
-                            <p class="small-text">2026 - Self Project</p>
-                            <h3>Geographical Information of Indonesia</h3>
-                            <p class="project-desc">
+                            <p class="small-text gold-text" data-i18n="proj_meta">2026 - Self Project</p>
+                            <h3 data-i18n="p1_title">Geographical Information of Indonesia</h3>
+                            <p class="project-desc" data-i18n="p1_desc">
                                 Interactive geographic information platform showcasing Indonesia's regions, islands, and natural landscapes.
                             </p>
                             <ul class="tags">
-                                <li class="tag"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4.136 3.012h15.729l-1.431 16.15-6.451 1.826-6.414-1.826zm5.266 7.302-.173-2.035 7.533.002.173-1.963-9.87-.002.522 5.998h6.835l-.243 2.566-2.179.602-2.214-.605-.141-1.58H7.691l.247 3.123L12 17.506l4.028-1.08.558-6.111H9.402z"></path></svg> HTML</li>
-                                <li class="tag"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4.192 3.143h15.615l-1.42 16.034-6.404 1.812-6.369-1.813zM16.9 6.424l-9.8-.002.158 1.949 7.529.002-.189 2.02H9.66l.179 1.913h4.597l-.272 2.62-2.164.598-2.197-.603-.141-1.569h-1.94l.216 2.867L12 17.484l3.995-1.137z"></path></svg> CSS</li>
+                                <li class="tag"><svg><use href="#i-html"/></svg> HTML</li>
+                                <li class="tag"><svg><use href="#i-css"/></svg> CSS</li>
                             </ul>
-                            <a href="https://github.com/rodriegooo/Exercise-session2-lab/tree/master" target="_blank" class="project-link">View Project <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M6 13h8.09l-3.3 3.29 1.42 1.42 5.7-5.71-5.7-5.71-1.42 1.42 3.3 3.29H6z"></path></svg></a>
+                            <a href="https://github.com/rodriegooo/Exercise-session2-lab/tree/master" target="_blank" rel="noopener" class="project-link"><span data-i18n="view_project">View Project</span> <svg><use href="#i-arrow"/></svg></a>
                         </div>
                     </article>
 
-                    <!-- Project 2 -->
-                    <article class="project-card">
-                        <img src="images/Cashier Simulation Project.jpeg" alt="Store Cashier Simulation" class="project-img">
+                    <article class="project-card tilt spot">
+                        <div class="project-media">
+                            <img src="images/Cashier Simulation Project.jpeg" alt="Store Cashier Simulation" class="project-img">
+                            <span class="project-num">02</span>
+                        </div>
                         <div class="project-body">
-                            <p class="small-text">2026 - Self Project</p>
-                            <h3>Store Cashier Simulation</h3>
-                            <p class="project-desc">
+                            <p class="small-text gold-text" data-i18n="proj_meta">2026 - Self Project</p>
+                            <h3 data-i18n="p2_title">Store Cashier Simulation</h3>
+                            <p class="project-desc" data-i18n="p2_desc">
                                 A store cashier simulation system for processing purchases, calculating totals, and managing customer transactions.
                             </p>
                             <ul class="tags">
-                                <li class="tag"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9.585 11.692h4.328s2.432.039 2.432-2.35V5.391S16.714 3 11.936 3C7.362 3 7.647 4.983 7.647 4.983l.006 2.055h4.363v.617H5.92s-2.927-.332-2.927 4.282 2.555 4.45 2.555 4.45h1.524v-2.141s-.083-2.554 2.513-2.554m-.056-5.74a.784.784 0 1 1 0-1.57.784.784 0 1 1 0 1.57"></path><path d="M18.452 7.532h-1.524v2.141s.083 2.554-2.513 2.554h-4.328s-2.432-.04-2.432 2.35v3.951s-.369 2.391 4.409 2.391c4.573 0 4.288-1.983 4.288-1.983l-.006-2.054h-4.363v-.617h6.097s2.927.332 2.927-4.282-2.555-4.451-2.555-4.451m-3.981 10.436a.784.784 0 1 1 0 1.57.784.784 0 1 1 0-1.57"></path></svg> Python</li>
+                                <li class="tag"><svg><use href="#i-py"/></svg> Python</li>
                             </ul>
                         </div>
                     </article>
-                    
-                    <!-- Project 3 -->
-                    <article class="project-card">
-                        <img src="images/Robby Simulation Project.png" alt="Robby's Adventure Simulation" class="project-img">
+
+                    <article class="project-card tilt spot">
+                        <div class="project-media">
+                            <img src="images/Robby Simulation Project.png" alt="Robby's Adventure Simulation" class="project-img">
+                            <span class="project-num">03</span>
+                        </div>
                         <div class="project-body">
-                            <p class="small-text">2026 - Self Project</p>
-                            <h3>Robby's Adventure Simulation</h3>
-                            <p class="project-desc">
+                            <p class="small-text gold-text" data-i18n="proj_meta">2026 - Self Project</p>
+                            <h3 data-i18n="p3_title">Robby's Adventure Simulation</h3>
+                            <p class="project-desc" data-i18n="p3_desc">
                                 A movement simulation allowing users to navigate Robby in four cardinal directions by specifying the number of steps.
                             </p>
                             <ul class="tags">
-                                <li class="tag"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M9.585 11.692h4.328s2.432.039 2.432-2.35V5.391S16.714 3 11.936 3C7.362 3 7.647 4.983 7.647 4.983l.006 2.055h4.363v.617H5.92s-2.927-.332-2.927 4.282 2.555 4.45 2.555 4.45h1.524v-2.141s-.083-2.554 2.513-2.554m-.056-5.74a.784.784 0 1 1 0-1.57.784.784 0 1 1 0 1.57"></path><path d="M18.452 7.532h-1.524v2.141s.083 2.554-2.513 2.554h-4.328s-2.432-.04-2.432 2.35v3.951s-.369 2.391 4.409 2.391c4.573 0 4.288-1.983 4.288-1.983l-.006-2.054h-4.363v-.617h6.097s2.927.332 2.927-4.282-2.555-4.451-2.555-4.451m-3.981 10.436a.784.784 0 1 1 0 1.57.784.784 0 1 1 0-1.57"></path></svg> Python</li>
+                                <li class="tag"><svg><use href="#i-py"/></svg> Python</li>
                             </ul>
                         </div>
                     </article>
@@ -237,38 +338,41 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact -->
         <section id="contact" class="section">
             <div class="container">
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="contact-intro">
-                    I'm open to connecting with people interested in technology, data, programming, and analytical problem-solving.
-                </p>
+                <div class="contact-panel card spot reveal">
+                    <span class="eyebrow" data-i18n="nav_contact">Contact</span>
+                    <h2 class="section-title" data-i18n="contact_title">Get in Touch</h2>
+                    <p class="contact-intro" data-i18n="contact_intro">
+                        I'm open to connecting with people interested in technology, data, programming, and analytical problem-solving.
+                    </p>
 
-                <div class="contact-cards">
-                    <a href="mailto:alfonsusrodrigoharyoko@gmail.com" class="contact-card email">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 2v.51l-8 6.22-8-6.22V6zM4 18V9.04l7.39 5.74c.18.14.4.21.61.21s.43-.07.61-.21L20 9.03v8.96H4Z"></path></svg>
-                        <div>
-                            <h3>Email</h3>
-                            <p>Send me an email</p>
-                        </div>
-                    </a>
+                    <div class="contact-cards">
+                        <a href="mailto:alfonsusrodrigoharyoko@gmail.com" class="contact-card email">
+                            <svg><use href="#i-mail"/></svg>
+                            <div>
+                                <h3>Email</h3>
+                                <p data-i18n="c_email_sub">Click to copy my email</p>
+                            </div>
+                        </a>
 
-                    <a href="https://www.linkedin.com/in/alfonsus-haryoko" target="_blank" class="contact-card linkedin">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M4.983 2.821a2.188 2.188 0 1 0 0 4.376 2.188 2.188 0 1 0 0-4.376m4.254 6.034v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118 1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66zm-6.142 0H6.87v12.139H3.095z"></path></svg>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <p>Connect professionally</p>
-                        </div>
-                    </a>
+                        <a href="https://www.linkedin.com/in/alfonsus-haryoko" target="_blank" rel="noopener" class="contact-card linkedin">
+                            <svg><use href="#i-linkedin"/></svg>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <p data-i18n="c_li_sub">Connect professionally</p>
+                            </div>
+                        </a>
 
-                    <a href="https://github.com/rodriegooo" target="_blank" class="contact-card github">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.6 9.6 0 0 1 2.496-.336 9.6 9.6 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2"></path></svg>
-                        <div>
-                            <h3>GitHub</h3>
-                            <p>Explore my code</p>
-                        </div>
-                    </a>
+                        <a href="https://github.com/rodriegooo" target="_blank" rel="noopener" class="contact-card github">
+                            <svg><use href="#i-github"/></svg>
+                            <div>
+                                <h3>GitHub</h3>
+                                <p data-i18n="c_gh_sub">Explore my code</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -276,9 +380,14 @@
     </main>
 
     <footer class="site-footer">
-        <p><strong>&copy; 2026 Alfonsus Rodrigo Haryoko. All rights reserved.</strong></p>
-        <p class="gray-text">Designed &amp; Built with AI (Alfonsus Intelligence)</p>
+        <p class="footer-mark">A<span>.</span>R<span>.</span>H</p>
+        <p><strong data-i18n="footer_rights">&copy; 2026 Alfonsus Rodrigo Haryoko. All rights reserved.</strong></p>
+        <p class="muted small-text" data-i18n="footer_built">Designed &amp; Built with AI (Alfonsus Intelligence)</p>
     </footer>
+
+    <button type="button" class="back-top" id="backTop" data-i18n-aria="backTop"><svg><use href="#i-up"/></svg></button>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
