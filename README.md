@@ -140,17 +140,19 @@ portfolio-website/
 ## 📸 Screenshots
 
 Screenshots of the original (teal) version:
-
-My Portfolio Website on Desktop & Tablet:
+a. My Portfolio Website on Desktop & Tablet:
 <img width="1917" height="871" alt="image" src="https://github.com/user-attachments/assets/0f1db061-4195-4f39-9761-d78f491a247c" />
-
-My Portfolio Website on Mobile:
+b. My Portfolio Website on Mobile:
 <img width="1917" height="870" alt="image" src="https://github.com/user-attachments/assets/b9821353-4a51-40a4-8905-18244c5edcd8" />
 
 Original website design:
-
-Desktop & Tablet:
+a. Desktop & Tablet:
 <img width="1440" height="4000" alt="Desktop - HCI LAB Build and Test a Single-Page Responsive Portfolio (4)" src="https://github.com/user-attachments/assets/483a5163-3b6e-4d6b-baf0-2b039371b4fd" />
-
-Mobile:
+b. Mobile:
 <img width="360" height="1550" alt="Mobile - HCI LAB Build and Test a Single-Page Responsive Portfolio (1)" src="https://github.com/user-attachments/assets/c0c8eedd-b758-4dd0-90a0-4d8d310c03e1" />
+
+Screenshots of the updated (gold) version:
+a. My Portfolio Website on Desktop & Tablet:
+<img width="1901" height="862" alt="image" src="https://github.com/user-attachments/assets/c9915b7b-fde1-41b1-8259-087ad8915d06" />
+b. My Portfolio Website on Mobile:
+<img width="475" height="755" alt="image" src="https://github.com/user-attachments/assets/5737cc03-3210-448e-b16d-949b841de7cc" />
